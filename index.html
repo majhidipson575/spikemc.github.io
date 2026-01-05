@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SpikeMC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-      text-align: center;
-    }
-    header {
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #22c55e, #06b6d4);
-      color: #020617;
-    }
-    section {
-      padding: 40px 20px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #22c55e;
-      color: #020617;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>SpikeMC | Minecraft Server</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>SpikeMC</h1>
-  <p>Welcome to our Minecraft server</p>
-  <a class="btn" href="#">Join Now</a>
+<header class="navbar">
+  <div class="logo">SpikeMC</div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Rules</a>
+    <a href="#">Forum</a>
+    <a href="https://discord.gg/VfCPGgdkDz" target="_blank">Discord</a>
+  </nav>
+
+  <div class="user-area">
+    <img id="avatar" class="avatar hidden">
+  </div>
 </header>
 
-<section>
-  <h2>About Us</h2>
-  <p>SpikeMC is a fun and friendly Minecraft server.</p>
+<!-- PROFILE POPUP -->
+<div class="profile-popup hidden" id="profilePopup">
+  <img id="popupAvatar">
+  <h3 id="popupName"></h3>
+  <a href="https://discord.gg/VfCPGgdkDz" target="_blank">Join Discord</a>
+  <button onclick="logout()">Logout</button>
+</div>
+
+<section class="hero">
+  <h1>SpikeMC</h1>
+  <p id="status">Loading server status...</p>
+
+  <div class="buttons">
+    <button class="btn glow" onclick="copyIP()">PLAY.SPIKEMC.NET</button>
+    <a class="btn discord" href="https://discord.gg/VfCPGgdkDz" target="_blank">DISCORD</a>
+  </div>
+
+  <p class="copy-msg" id="copyMsg">IP Copied!</p>
 </section>
 
+<section class="login">
+  <a class="btn glow" id="loginBtn">Login with Discord</a>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
