@@ -1,7 +1,7 @@
 // ===== CONFIG =====
 const SERVER_IP = "play.spikemc.qzz.io";
-const CLIENT_ID = "YOUR_DISCORD_CLIENT_ID";
-const REDIRECT = "https://spikemc.github.io";
+const CLIENT_ID = "1457777669038018622";
+const REDIRECT = "https://majhidipson575.github.io/spikemc.github.io";
 
 // ===== PLAYER COUNT =====
 async function serverStatus() {
