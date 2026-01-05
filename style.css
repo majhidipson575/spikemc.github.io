@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0a1d33, #050b14);
+  color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(5, 15, 30, 0.7);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #3fa9ff;
+}
+
+.navbar nav a {
+  margin: 0 14px;
+  color: #9ccfff;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #3fa9ff;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  padding: 160px 20px;
+  text-align: center;
+  animation: fade 1s ease;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: #3fa9ff;
+  text-shadow: 0 0 25px #3fa9ff88;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 14px 30px;
+  margin: 10px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.glow {
+  background: linear-gradient(135deg,#1e90ff,#0066ff);
+  box-shadow: 0 0 25px #1e90ff88;
+}
+
+.glow:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 45px #1e90ff;
+}
+
+.discord {
+  background: #5865F2;
+}
+
+/* LOGIN */
+.login {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/* AVATAR */
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 20px #3fa9ff88;
+}
+
+.hidden {
+  display: none;
+}
+
+/* PROFILE POPUP */
+.profile-popup {
+  position: fixed;
+  top: 80px;
+  right: 40px;
+  background: #081b33;
+  padding: 20px;
+  border-radius: 16px;
+  width: 220px;
+  box-shadow: 0 0 40px #000;
+  animation: popup 0.3s ease;
+}
+
+.profile-popup img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.profile-popup a,
+.profile-popup button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #1e90ff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* COPY MESSAGE */
+.copy-msg {
+  margin-top: 15px;
+  color: #7dd3fc;
+  display: none;
+}
+
+@keyframes fade {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1;}
+}
+
+@keyframes popup {
+  from {opacity:0; transform: translateY(-10px);}
+  to {opacity:1;}
+}
